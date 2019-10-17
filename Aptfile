@@ -35,3 +35,5 @@ http://archive.ubuntu.com/ubuntu/pool/main/libw/libwebp/libwebp6_0.6.1-2_amd64.d
 
 libvips
 libvips-dev
+build-essential
+gcc
