@@ -1,0 +1,37 @@
+#:repo:deb http://cz.archive.ubuntu.com/ubuntu artful main universe
+lcov
+clang-tidy
+libtest-nginx-perl
+libexpat1-dev
+gettext
+liblcms2-dev
+libmagickwand-dev
+libopenexr-dev
+libcfitsio3-dev
+libfftw3-dev
+libgif-dev
+libgs-dev
+libgsf-1-dev
+libmatio-dev
+libopenslide-dev
+liborc-0.4-dev
+libpango1.0-dev
+libpoppler-glib-dev
+librsvg2-dev
+libwebp-dev
+libtiff5-dev
+libheif-dev
+# missing on xenial, unfortunately
+# libwebpmux2
+libglib2.0-dev
+# needed for building libvips from source
+gtk-doc-tools
+gobject-introspection
+
+http://archive.ubuntu.com/ubuntu/pool/main/libw/libwebp/libwebp-dev_0.6.1-2_amd64.deb
+http://archive.ubuntu.com/ubuntu/pool/main/libw/libwebp/libwebpdemux2_0.6.1-2_amd64.deb
+http://archive.ubuntu.com/ubuntu/pool/main/libw/libwebp/libwebpmux3_0.6.1-2_amd64.deb
+http://archive.ubuntu.com/ubuntu/pool/main/libw/libwebp/libwebp6_0.6.1-2_amd64.deb
+
+libvips
+libvips-dev

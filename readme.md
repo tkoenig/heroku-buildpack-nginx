@@ -1,19 +1,13 @@
-# Heroku Buildpack: NGINX
+# WIP Heroku Buildpack: NGINX - images (weserv)
 
 Nginx-buildpack vendors NGINX inside a dyno and connects NGINX to an app server via UNIX domain sockets.
 
-## Motivation
+## Dev todo
 
-Some application servers (e.g. Ruby's Unicorn) halt progress when dealing with network I/O. Heroku's Cedar routing stack [buffers only the headers](https://devcenter.heroku.com/articles/http-routing#request-buffering) of inbound requests. (The Cedar router will buffer the headers and body of a response up to 1MB) Thus, the Heroku router engages the dyno during the entire body transfer –from the client to dyno. For applications servers with blocking I/O, the latency per request will be degraded by the content transfer. By using NGINX in front of the application server, we can eliminate a great deal of transfer time from the application server. In addition to making request body transfers more efficient, all other I/O should be improved since the application server need only communicate with a UNIX socket on localhost. Basically, for webservers that are not designed for efficient, non-blocking I/O, we will benefit from having NGINX to handle all I/O operations.
+scripts/build_cmake # install cmake
+scripts/apt /buildpack/
+scripts/build_vips --disable-dependency-tracking
 
-## Versions
-
-### Cedar-14 (deprecated)
-* NGINX Version: 1.9.5
-### Heroku 16
-* NGINX Version: 1.9.5
-### Heroku 18
-* NGINX Version: 1.16.0
 
 ## Requirements (Proxy Mode)
 
